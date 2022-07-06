@@ -6,13 +6,13 @@ Read https://mui.com/guides/migration-v4/
 
 ## Upgrade dependencies
 
-- Update React to 17.x
+- Update React to 18.x
 - Add `mosaic-react`
-- Add new peer dependencies `@mui/material`, `@mui/lab`, `@mui/x-data-grid`,
-  `@emotion/react`, and `@emotion/styled`
+- Add new peer dependencies `mosaic-assets-resolver`, `@mui/material`,
+  `@mui/lab`, `@mui/x-data-grid`, `@emotion/react`, and `@emotion/styled`
 - If using icons, add `mosaic-react-icons` and `@mui/icons-material`
 - Add `@mui/styles`, this will be removed later when updating to `emotion`
-- Remove `s1-ui`, `s1-ui-icons`, and `s1-core-icons`
+- Remove `s1-ui`, `s1-ui-assets-resolver`, `s1-ui-icons`, and `s1-core-ui`
 - Remove `@material-ui/core`, `@material-ui/icons`, `@material-ui/pickers`
 - It is strongly recommended to replace `moment` with `date-fns`, see
   https://momentjs.com/docs/#/-project-status/
