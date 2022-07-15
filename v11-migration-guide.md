@@ -204,3 +204,22 @@ There will be behavior changes:
 - Remove `@mui/styles` from dependencies
 - Basic rule for usage of `styled` vs. `sx` prop is to use `styled` when a style
   will be reused and to use `sx` when the style is a one off
+
+## With React 17
+
+It's recommended to update to React 18 as part of the migration but if that is
+not possible, some webpack configuration will be needed. One of our
+dependencies, [react-dnd](https://react-dnd.github.io/react-dnd/about), is known
+to have an issue with React 17. This can be worked around by adding a `resolve`
+block to your webpack config file
+
+```javascript
+resolve: {
+  fallback: {
+    'react/jsx-runtime': 'react/jsx-runtime.js',
+    'react/jsx-dev-runtime': 'react/jsx-dev-runtime.js',
+  },
+},
+```
+
+See https://github.com/react-dnd/react-dnd/issues/3423 for more information
